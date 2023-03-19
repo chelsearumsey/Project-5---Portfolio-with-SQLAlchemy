@@ -1,7 +1,7 @@
 # **The Programming Portfolio of Chelsea Rumsey**
 
 
-For this project, I have built a website containing each programming project that I have completed so far on my coding journey.
+For this project, I have built a website containing each programming projects that I have completed so far on my coding journey.
 
 
 ### To run this project on your local computer, you will need to complete the following tasks:
@@ -24,7 +24,7 @@ For this project, I have built a website containing each programming project tha
         `source ./env/bin/activate`
 
     
->NOTE: If you shut down the terminal or reboot your computer, the virtual environment will become deactivated. To reactivate the virtual environment you will need to run the activation command again.
+>NOTE: If you shut down the terminal or reboot your computer, the virtual environment will become deactivated. To reactivate the virtual environment, you will need to run the activation command again.
 
 
 3. Install the required dependencies into your Python environment:
