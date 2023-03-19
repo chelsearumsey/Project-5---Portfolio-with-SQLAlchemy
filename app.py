@@ -5,7 +5,7 @@ from models import db, Project, app
 
 @app.route('/')
 def index():
-    return f'Thank you for viewing my programming portfolio!'
+    return render_template('index.html')
 
 
 @app.route('/project/new')
