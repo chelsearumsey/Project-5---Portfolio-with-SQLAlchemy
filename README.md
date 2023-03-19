@@ -1,4 +1,4 @@
-#**The Programming Portfolio of Chelsea Rumsey**
+# **The Programming Portfolio of Chelsea Rumsey**
 
 
 For this project, I have built a website containing each programming project that I have completed so far on my coding journey.
@@ -30,7 +30,7 @@ To run this project on your local computer, you will need to complete the follow
 3. Install the required dependencies into your Python environment:
 
     Install the project requirements from the provided requirements.txt file by running the following command in your terminal:
-        `pip install -r requirements.txt`
+        `pip install -r requirements.txt` 
 
 
 What I learned by completing this project:
