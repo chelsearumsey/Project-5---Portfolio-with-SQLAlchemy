@@ -1,7 +1,7 @@
-# **The Programming Portfolio of Chelsea Rumsey**
+## **The Programming Portfolio of Chelsea Rumsey**
 
 
-For this project, I have built a website containing each programming projects that I have completed so far on my coding journey.
+For this project, I have built a website containing each programming project that I have completed so far on my coding journey.
 
 
 ### To run this project on your local computer, you will need to complete the following tasks:
