@@ -4,7 +4,7 @@
 For this project, I have built a website containing each programming project that I have completed so far on my coding journey.
 
 
-To run this project on your local computer, you will need to complete the following tasks:
+### To run this project on your local computer, you will need to complete the following tasks:
 
 1. Create a virtual Python environment in your IDE of choice by running the following command in your terminal: 
     
