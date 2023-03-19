@@ -33,5 +33,5 @@ To run this project on your local computer, you will need to complete the follow
         `pip install -r requirements.txt` 
 
 
-What I learned by completing this project:
+### What I learned by completing this project:
     This project has taught me how to create a fully integrated website using html, CSS, SQLAlchemy, and Python, all within the Flask framework. 
