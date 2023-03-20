@@ -8,24 +8,31 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/project/new')
-def create():
-    pass
+@app.route('/projects/new', methods=['GET', 'POST'])
+def add_project():
+    if request.form:
+        new_project = Project(title=request.form['title'], date=request.form['date'],
+                              description=request.form['desc'], skills=request.form['skills'])
+        db.session.add(new_project)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('projectform.html')
 
 
-@app.route('/project/<id>')
+@app.route('/projects/<id>')
 def detail():
-    pass
+    return render_template('detail.html')
 
 
-@app.route('/project/<id>/edit')
+@app.route('/projects/<id>/edit', methods=['GET', 'POST'])
 def edit_project():
     pass
 
 
-@app.route('/project/<id>/delete')
+@app.route('/projects/<id>/delete')
 def delete_project():
     pass
+
 
 if __name__ == '__main__':
     with app.app_context():
