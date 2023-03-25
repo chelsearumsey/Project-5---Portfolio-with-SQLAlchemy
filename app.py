@@ -12,8 +12,9 @@ def index():
 @app.route('/projects/new', methods=['GET', 'POST'])
 def add_project():
     if request.form:
-        new_project = Project(title=request.form['title'], description=request.form['desc'], 
-                              skills=request.form['skills'])
+        new_project = Project(title=request.form['title'], date=request.form['date'], 
+                              description=request.form['desc'], skills=request.form['skills'], 
+                              url=request.form['github'])
         db.session.add(new_project)
         db.session.commit()
         return redirect(url_for('index'))
