@@ -6,14 +6,14 @@ from completed_projects import PROJECTS
 
 def insert_project_data():
     for project in PROJECTS:
-        project_in_db = db.session.query(Project).filter(Project.title==project[title]).one_or_none()
+        project_in_db = Project.query.filter(Project.title==project['title']).one_or_none()
         if project_in_db == None:
-            id = project[id]
-            title = project[title]
-            date = project[date]
-            description = project[description]
-            skills = project[skills]
-            url= project[url]
+            id = project['id']
+            title = project['title']
+            date = project['date']
+            description = project['description']
+            skills = project['skills']
+            url= project['url']
             new_project = Project(id=id, title=title, date=date, 
                                     description=description, 
                                     skills=skills, url=url)
@@ -57,7 +57,8 @@ def delete_project():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True, port=8000, host='0.0.0.0')
-    with app.app_context():
         insert_project_data()
+    app.run(debug=True, port=8000, host='0.0.0.0')
+    
+    
     
