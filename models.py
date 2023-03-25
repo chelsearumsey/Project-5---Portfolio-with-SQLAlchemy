@@ -13,6 +13,7 @@ class Project(db.Model):
     date = db.Column('Date', db.DateTime, default=datetime.datetime.now)
     description = db.Column('Project Description', db.Text)
     skills = db.Column('Skills', db.Text)
+    url = db.Column('GitHub URL', db.String())
 
     def __repr__(self):
         return f'Title: {self.title} Date: {self.date} Project Description: {self.description} Skills: {self.skills}'
