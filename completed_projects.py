@@ -54,7 +54,7 @@ PROJECTS = [{
                                 being added to the database. All interactions with the 
                                 records used ORM methods for viewing records, creating 
                                 records, and exporting a new CSV backup.''',
-            'skills': f'''Used knowledge of CSV, File I/O, SQL, and Git, Set up a virtual environment 
-                            with Python, Cleaned CSV data, and Created a database using SQLAlchemy''',
+            'skills': f'''Used knowledge of CSV, File I/O, SQL, Git, Set up a virtual environment 
+                            with Python, Cleaned CSV data, Created a database using SQLAlchemy''',
             'url': 'https://github.com/chelsearumsey/Project-4---Store-Inventory-with-SQLAlchemy'
             }] 
