@@ -40,8 +40,9 @@ def add_project():
 
 
 @app.route('/projects/<id>')
-def detail():
-    return render_template('detail.html')
+def detail(id):
+    project = Project.query.get_or_404(id)
+    return render_template('detail.html', project=project)
 
 
 @app.route('/projects/<id>/edit', methods=['GET', 'POST'])
