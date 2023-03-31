@@ -3,8 +3,7 @@
 {% block content %}
     <section class="header">
         <h1>Python Developer</h1>
-        <p>If, at first, you do not succeed, call it version 1.0. 
-            ― Khayri R.R. Woulfe</p>
+        <p>If, at first, you do not succeed, call it version 1.0. ― Khayri R.R. Woulfe</p>
         <img src="../static/Headshot.jpg" alt="Headshot of myself">
     </section>
     <section id="about">
@@ -39,8 +38,7 @@
         <div id="project-list">
             {% for project in projects %}
                 <div id="project1" class="a-project">
-                    <a href="{{ url_for('detail', id=project.id) }}">
-                        <h3>{{ project.title }}</h3></a>
+                    <a href="{{ url_for('detail', id=project.id) }}"><h3>{{ project.title }}</h3></a>
                     <a href="{{ project.url }}" target = "_blank" class="github-btn">
                         <i class="fab fa-github"></i>
                         View on GitHub
@@ -61,12 +59,10 @@
         <h2>Contact Me</h2>
         <div class="socials">
             <ul>
-                <li><a href="https://github.com/chelsearumsey" target = "_blank">
-                    <i class="fa-brands fa-github fa-2xl"></i></a>
+                <li><a href="https://github.com/chelsearumsey" target = "_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                     GitHub Repositories
                 </li>
-                <li><a href="https://linkedin.com/in/chelseamrumsey" target = "_blank">
-                    <i class="fa-brands fa-linkedin fa-2xl"></i></a>  
+                <li><a href="https://linkedin.com/in/chelseamrumsey" target = "_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>  
                     LinkedIn Profile
                 </li>
                 <li><i class="fas fa-envelope fa-2xl"></i>
