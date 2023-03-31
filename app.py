@@ -6,14 +6,15 @@ from completed_projects import PROJECTS
 
 def insert_project_data():
     for project in PROJECTS:
-        project_in_db = Project.query.filter(Project.title==project['title']).one_or_none()
+        project_in_db = (Project.query.filter
+                         (Project.title==project['title']).one_or_none())
         if project_in_db == None:
             id = project['id']
             title = project['title']
             date = project['date']
             description = project['description']
             skills = project['skills']
-            url= project['url']
+            url = project['url']
             new_project = Project(id=id, title=title, date=date, 
                                     description=description, 
                                     skills=skills, url=url)
@@ -36,20 +37,23 @@ def about():
 def add_project():
     projects = Project.query.all()
     if request.form:
-        new_project = Project(title=request.form['title'], date=request.form['date'], 
-                              description=request.form['desc'], skills=request.form['skills'], 
+        new_project = Project(title=request.form['title'], 
+                              date=request.form['date'], 
+                              description=request.form['desc'], 
+                              skills=request.form['skills'], 
                               url=request.form['github'])
         db.session.add(new_project)
         db.session.commit()
         return redirect(url_for('index'))
-    return render_template('projectform.html', projects = projects)
+    return render_template('projectform.html', projects=projects)
 
 
 @app.route('/project/<id>')
 def detail(id):
     projects = Project.query.all()
     project = Project.query.get_or_404(id)
-    return render_template('detail.html', project=project, projects = projects)
+    return render_template('detail.html', project=project, 
+                           projects=projects)
 
 
 @app.route('/project/<id>/edit', methods=['GET', 'POST'])
@@ -63,7 +67,7 @@ def edit_project(id):
         project.url=request.form['github']
         db.session.commit()
         return redirect(url_for('detail', id=id))
-    return render_template('edit_project.html', project = project)
+    return render_template('edit_project.html', project=project)
 
 
 @app.route('/project/<id>/delete')
