@@ -27,7 +27,7 @@ def index():
     return render_template('index.html', projects=projects)
 
 
-@app.route('/projects/about')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
