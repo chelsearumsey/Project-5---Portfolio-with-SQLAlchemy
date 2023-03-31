@@ -2,7 +2,7 @@ from flask import (render_template, redirect,
                    url_for, request)
 from models import db, Project, app
 from completed_projects import PROJECTS
-import datetime
+from datetime import datetime
 
 
 def insert_project_data():
@@ -12,7 +12,7 @@ def insert_project_data():
         if project_in_db == None:
             id = project['id']
             title = project['title']
-            date = datetime.strptime(request.form['date'], '%Y-%m').date()
+            date = datetime.strptime(project['date'],'%B %Y').date()
             description = project['description']
             skills = project['skills']
             url = project['url']
