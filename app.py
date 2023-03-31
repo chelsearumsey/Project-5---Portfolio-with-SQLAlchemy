@@ -2,6 +2,7 @@ from flask import (render_template, redirect,
                    url_for, request)
 from models import db, Project, app
 from completed_projects import PROJECTS
+import datetime
 
 
 def insert_project_data():
@@ -11,7 +12,7 @@ def insert_project_data():
         if project_in_db == None:
             id = project['id']
             title = project['title']
-            date = project['date']
+            date = datetime.strptime(request.form['date'], '%Y-%m').date()
             description = project['description']
             skills = project['skills']
             url = project['url']
@@ -38,7 +39,7 @@ def add_project():
     projects = Project.query.all()
     if request.form:
         new_project = Project(title=request.form['title'], 
-                              date=request.form['date'], 
+                              date=datetime.strptime(request.form['date'], '%Y-%m').date()
                               description=request.form['desc'], 
                               skills=request.form['skills'], 
                               url=request.form['github'])
@@ -61,7 +62,7 @@ def edit_project(id):
     project = Project.query.get_or_404(id)
     if request.form:
         project.title=request.form['title']
-        project.date=request.form['date']
+        project.date=datetime.strptime(request.form['date'], '%Y-%m').date()
         project.description=request.form['desc'] 
         project.skills=request.form['skills'] 
         project.url=request.form['github']

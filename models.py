@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column('Project Title', db.String())
-    date = db.Column('Completion Date', db.String())
+    date = db.Column('Completion Date', db.DateTime())
     description = db.Column('Description', db.Text)
     skills = db.Column('Skills', db.Text)
     url = db.Column('GitHub Link', db.String())
