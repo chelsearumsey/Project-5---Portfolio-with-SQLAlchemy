@@ -39,7 +39,7 @@ def add_project():
     projects = Project.query.all()
     if request.form:
         new_project = Project(title=request.form['title'], 
-                              date=datetime.strptime(request.form['date'], '%Y-%m').date()
+                              date=datetime.strptime(request.form['date'], '%Y-%m').date(),
                               description=request.form['desc'], 
                               skills=request.form['skills'], 
                               url=request.form['github'])
